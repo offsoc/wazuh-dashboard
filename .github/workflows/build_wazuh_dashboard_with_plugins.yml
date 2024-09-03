@@ -165,19 +165,19 @@ jobs:
           fi
 
       - name: Download dashboard artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ env.WAZUH_DASHBOARD_SLIM }}
           path: ${{ env.CURRENT_DIR }}/artifacts/dashboard
 
       - name: Download security plugin artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ env.WAZUH_SECURITY_PLUGIN }}
           path: ${{ env.CURRENT_DIR }}/artifacts/security-plugin
 
       - name: Download plugins artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ env.WAZUH_PLUGINS }}
           path: ${{ env.CURRENT_DIR }}/artifacts/plugins
